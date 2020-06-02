@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.tiles3.TilesView;
 @Configuration
 @EnableWebMvc
 @ComponentScan("bluesoftapp")
-public class WebConfig implements WebMvcConfigurer {
+public class WebMvcConfig implements WebMvcConfigurer {
 
 
 
