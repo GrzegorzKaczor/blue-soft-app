@@ -7,25 +7,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/c")
-public class ContractsController {
+@RequestMapping("/contract")
+public class ContractController {
 
     private ContractService contractService;
 
-    public ContractsController(ContractService contractService) {
+    public ContractController(ContractService contractService) {
         this.contractService = contractService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public String getAllContracts() {
         Gson gson = new Gson();
         return gson.toJson(contractService.getAllContracts());
     }
 
-//    @GetMapping
-//    public String getAllContracts() {
-//        return "test controllera";
-//
-//    }
+    @GetMapping("/active")
+    public String getActiveContracts() {
+        Gson gson = new Gson();
+        return gson.toJson(contractService.getActiveContracts());
+    }
 
 }

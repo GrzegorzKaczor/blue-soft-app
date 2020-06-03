@@ -1,7 +1,7 @@
 package bluesoftapp.service;
 
 
-import bluesoftapp.model.Contract;
+import bluesoftapp.model.dto.ContractDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public interface ContractService {
 
-   List<Contract> getAllContracts();
+   List<ContractDto> getAllContracts();
+   List<ContractDto> getActiveContracts();
 
 }
