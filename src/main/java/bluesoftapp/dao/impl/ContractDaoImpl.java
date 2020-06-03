@@ -40,4 +40,11 @@ public class ContractDaoImpl implements ContractDao {
         Session session = sessionFactory.getCurrentSession();
         session.save(contract);
     }
+
+    @Override
+    public void deleteContract(Long id) {
+        Session session = sessionFactory.getCurrentSession();
+        Contract contract = session.byId(Contract.class).load(id);
+        session.delete(contract);
+    }
 }

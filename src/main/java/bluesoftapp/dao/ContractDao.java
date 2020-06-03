@@ -10,5 +10,6 @@ public interface ContractDao {
 
     List<Contract> getAllContracts();
     void addContract(Contract contract);
+    void deleteContract(Long id);
 
 }

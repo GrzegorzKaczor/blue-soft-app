@@ -1,7 +1,6 @@
 package bluesoftapp.service.impl;
 
 import bluesoftapp.dao.ContractDao;
-import bluesoftapp.model.Contract;
 import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.ContractService;
 import bluesoftapp.service.mapper.ContractMapper;
@@ -49,4 +48,10 @@ public class ContractServiceImpl implements ContractService {
     public void addContract(ContractDto contractDto) {
         contractDao.addContract(contractMapper.mapToEntity(contractDto));
     }
+
+    @Override
+    public void deleteContract(Long id) {
+        contractDao.deleteContract(id);
+    }
+
 }

@@ -43,6 +43,11 @@ public class ContractController {
         contractService.addContract(contractDto);
     }
 
+    @DeleteMapping({"/{id}"})
+    public void deleteContract (@PathVariable(value = "id") Long id){
+        contractService.deleteContract(id);
+    }
+
     @GetMapping("/test")
     public void addTest(){
         ContractDto contractDto = new ContractDto();
