@@ -12,7 +12,10 @@
         <put-attribute name="header" value="/WEB-INF/jsp/template/header.jsp"/>
         <put-attribute name="nav" value="/WEB-INF/jsp/template/nav.jsp"/>
         <put-attribute name="content" value=""/>
-        <put-attribute name="stylesheets" value="/src/main/resources/css/main.css"/>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/resources/css/main.css"/>
+        </put-list-attribute>
+
     </definition>
 
     <!-- Home page definition -->
