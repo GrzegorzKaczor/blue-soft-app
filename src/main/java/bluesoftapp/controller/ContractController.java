@@ -28,4 +28,12 @@ public class ContractController {
         return gson.toJson(contractService.getActiveContracts());
     }
 
+    @GetMapping("/system")
+    public String getSystems(){
+        Gson gson = new Gson();
+        return gson.toJson(contractService.getSystems());
+    }
+
+
+
 }

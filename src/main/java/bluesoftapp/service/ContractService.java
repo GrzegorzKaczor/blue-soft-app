@@ -11,5 +11,6 @@ public interface ContractService {
 
    List<ContractDto> getAllContracts();
    List<ContractDto> getActiveContracts();
+   List<String> getSystems();
 
 }

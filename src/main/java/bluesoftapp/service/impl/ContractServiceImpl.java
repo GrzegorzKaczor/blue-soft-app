@@ -1,12 +1,9 @@
 package bluesoftapp.service.impl;
 
 import bluesoftapp.dao.ContractDao;
-import bluesoftapp.model.Contract;
 import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.ContractService;
 import bluesoftapp.service.mapper.ContractMapper;
-import bluesoftapp.service.mapper.impl.ContractMapperImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,22 +24,26 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public List<ContractDto> getAllContracts() {
-        List<Contract> contractList = contractDao.getAllContracts();
-
-        List<ContractDto> collect = contractList.stream()
+        return contractDao.getAllContracts().stream()
                 .map(x -> contractMapper.mapToDto(x))
                 .collect(Collectors.toList());
-        return collect;
     }
 
     @Override
     public List<ContractDto> getActiveContracts() {
-        List<Contract> contractList = contractDao.getAllContracts();
-
-        return contractList.stream()
+        return contractDao.getAllContracts().stream()
                 .filter(x -> x.getActive().equals(true))
                 .map(x -> contractMapper.mapToDto(x))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<String> getSystems() {
+        return contractDao.getAllContracts().stream()
+                .map(x -> x.getSystem())
+                .collect(Collectors.toList());
+    }
+
+
 
 }
