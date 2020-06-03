@@ -34,4 +34,10 @@ public class ContractDaoImpl implements ContractDao {
         Query query = session.createQuery(criteriaQuery);
         return query.getResultList();
     }
+
+    @Override
+    public void addContract(Contract contract) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(contract);
+    }
 }

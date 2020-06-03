@@ -9,5 +9,6 @@ import java.util.List;
 public interface ContractDao {
 
     List<Contract> getAllContracts();
+    void addContract(Contract contract);
 
 }
