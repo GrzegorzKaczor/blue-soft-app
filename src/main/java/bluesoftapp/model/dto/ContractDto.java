@@ -1,5 +1,7 @@
 package bluesoftapp.model.dto;
 
+import bluesoftapp.model.AmountPeriod;
+import bluesoftapp.model.AmountType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +18,7 @@ public class ContractDto {
     private LocalDate fromDate;
     private LocalDate toDate;
     private BigDecimal amount;
-    private String amountType;
-    private String amountPeriod;
+    private AmountType amountType;
+    private AmountPeriod amountPeriod;
     private Boolean active;
 }

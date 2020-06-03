@@ -36,10 +36,10 @@ public class Contract {
     private BigDecimal amount;
     @NotNull
     @Column(name = "amount_type")
-    private String amountType;
+    private AmountType amountType;
     @NotNull
     @Column(name = "amount_period")
-    private String amountPeriod;
+    private AmountPeriod amountPeriod;
     @NotNull
     @Column(name = "active")
     private Boolean active;
