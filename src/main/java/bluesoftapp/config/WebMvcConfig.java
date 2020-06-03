@@ -16,15 +16,19 @@ import org.springframework.web.servlet.view.tiles3.TilesView;
 @ComponentScan("bluesoftapp")
 public class WebMvcConfig implements WebMvcConfigurer {
 
-
-
-        @Override
+    /**
+     * Configure ResourceHandlers to serve static resources like CSS/ Javascript etc...
+     */
+    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
                 .addResourceHandler("/resources/**")
                 .addResourceLocations("/resources/");
     }
 
+    /**
+     * Configure TilesConfigurer.
+     */
     @Bean
     public TilesConfigurer tilesConfigurer() {
         TilesConfigurer tilesConfigurer = new TilesConfigurer();
@@ -33,8 +37,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return tilesConfigurer;
     }
 
+    /**
+     * Configure ViewResolvers to deliver preferred views.
+     */
     @Bean
-    public ViewResolver getViewResolver(){
+    public ViewResolver getViewResolver() {
         UrlBasedViewResolver viewResolver = new UrlBasedViewResolver();
         viewResolver.setViewClass(TilesView.class);
         return viewResolver;

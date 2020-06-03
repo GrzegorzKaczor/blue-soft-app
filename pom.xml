@@ -135,21 +135,11 @@
 <!--            <version>2.6</version>-->
 <!--        </dependency>-->
 
-
-        <!--        <dependency>-->
-        <!--            <groupId>taglibs</groupId>-->
-        <!--            <artifactId>standard</artifactId>-->
-        <!--            <version>${tld.version}</version>-->
-        <!--        </dependency>-->
-
-        <!-- JSP Dependency -->
-        <!--        <dependency>-->
-        <!--            <groupId>javax.servlet.jsp</groupId>-->
-        <!--            <artifactId>javax.servlet.jsp-api</artifactId>-->
-        <!--            <version>${jsp.version}</version>-->
-        <!--            <scope>provided</scope>-->
-        <!--        </dependency>-->
-
+                <dependency>
+                    <groupId>taglibs</groupId>
+                    <artifactId>standard</artifactId>
+                    <version>1.1.2</version>
+                </dependency>
 
     </dependencies>
     <build>
