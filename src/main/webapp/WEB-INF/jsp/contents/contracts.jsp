@@ -23,7 +23,7 @@
     <tr>
         <td>125/2016</td>
         <td>PiemniOR</td>
-        <td>2016--12-01</td>
+        <td>2016-12-01</td>
         <td>2022-10-31</td>
         <td>11200zł netto</td>
         <td>na miesiąc</td>

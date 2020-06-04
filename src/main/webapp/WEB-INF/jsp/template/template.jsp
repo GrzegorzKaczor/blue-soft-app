@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
 <%--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">--%>
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"/>
     <link rel="stylesheet" type="text/css" href="/resources/css/main.css"/>
