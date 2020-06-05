@@ -7,26 +7,47 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-<%--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">--%>
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
-
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/resources/css/main.css"/>
-
-
+    <link rel="shortcut icon" href="/resources/img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <!-- DataTable CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/resources/css/main.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
     <title><tiles:getAsString name="title"/></title>
 </head>
 <body>
-<div id="container">
-    <header><tiles:insertAttribute name="header"/></header>
-    <nav><tiles:insertAttribute name="nav"/></nav>
-    <section><tiles:insertAttribute name="content"/></section>
+<div>
+    <header>
+        <tiles:insertAttribute name="header"/>
+    </header>
+
+    <main><tiles:insertAttribute name="content"/></main>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<!-- Popper -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<!-- DataTable JS -->
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<!-- DataTable Bootstrap JS -->
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<!-- Main JS -->
 <script src="/resources/script/script.js"></script>
 </body>
 </html>

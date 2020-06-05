@@ -1,0 +1,11 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    text-align: center
+}
+
+#title {
+    border-bottom: solid black 3px;
+}
