@@ -129,18 +129,18 @@
             <scope>compile</scope>
         </dependency>
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/commons-lang/commons-lang &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>commons-lang</groupId>-->
-<!--            <artifactId>commons-lang</artifactId>-->
-<!--            <version>2.6</version>-->
-<!--        </dependency>-->
+        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/commons-lang/commons-lang &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>commons-lang</groupId>-->
+        <!--            <artifactId>commons-lang</artifactId>-->
+        <!--            <version>2.6</version>-->
+        <!--        </dependency>-->
 
-                <dependency>
-                    <groupId>taglibs</groupId>
-                    <artifactId>standard</artifactId>
-                    <version>1.1.2</version>
-                </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
 
     </dependencies>
     <build>

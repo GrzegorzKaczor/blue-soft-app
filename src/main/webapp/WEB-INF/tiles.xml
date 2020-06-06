@@ -6,28 +6,29 @@
 
 <tiles-definitions>
     <!-- Base definition -->
-
     <definition name="base" template="/WEB-INF/jsp/template/template.jsp">
         <put-attribute name="title" value=""/>
         <put-attribute name="header" value="/WEB-INF/jsp/template/header.jsp"/>
         <put-attribute name="nav" value="/WEB-INF/jsp/template/nav.jsp"/>
         <put-attribute name="content" value=""/>
-        <put-list-attribute name="stylesheets">
-            <add-attribute value="/resources/css/main.css"/>
-        </put-list-attribute>
-
     </definition>
 
     <!-- Home page definition -->
     <definition name="home" extends="base">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-list-attribute name="script">
+            <add-attribute value="/resources/script/homeScript.js"/>
+        </put-list-attribute>
     </definition>
 
     <!-- Active Contract page definition -->
     <definition name="active" extends="base">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-list-attribute name="script">
+            <add-attribute value="/resources/script/activeScript.js"/>
+        </put-list-attribute>
     </definition>
 
     <!-- System page definition -->

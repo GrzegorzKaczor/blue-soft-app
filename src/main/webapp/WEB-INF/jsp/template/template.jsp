@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="tilte" uri="http://tiles.apache.org/tags-tiles" %>
+<tiles:importAttribute name="script"/>
 
 <!DOCTYPE html>
 <html lang="pl">
@@ -48,6 +50,9 @@
 <!-- DataTable Bootstrap JS -->
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 <!-- Main JS -->
-<script src="/resources/script/script.js"></script>
+<c:forEach var="script" items="${script}">
+    <script src="<c:url value="${script}"/>"></script>
+</c:forEach>
+<%--<script src="/resources/script/homeScript.js"></script>--%>
 </body>
 </html>
