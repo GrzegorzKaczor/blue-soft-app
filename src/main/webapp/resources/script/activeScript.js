@@ -8,8 +8,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.getJSON('http://localhost:8080/contract/active', function (data) {
-        console.log(data)
-
         data.forEach(function (dt) {
                 const fromDate = dt.fromDate.year + "-" + dt.fromDate.month + "- " + dt.fromDate.day;
                 const toDate = dt.toDate.year + "-" + dt.toDate.month + "-" + dt.toDate.day;

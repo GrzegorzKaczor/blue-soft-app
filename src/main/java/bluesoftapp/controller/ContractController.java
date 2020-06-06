@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/contract")
@@ -34,7 +35,7 @@ public class ContractController {
     }
 
     @GetMapping("/system")
-    public List<String> getSystems() {
+    public Set<String> getSystems() {
         return contractService.getSystems();
     }
 

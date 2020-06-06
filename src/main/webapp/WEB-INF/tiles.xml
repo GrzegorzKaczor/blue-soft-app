@@ -35,6 +35,9 @@
     <definition name="system" extends="base">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/system.jsp"/>
+        <put-list-attribute name="script">
+            <add-attribute value="/resources/script/systemScript.js"/>
+        </put-list-attribute>
     </definition>
 
     <!-- Add contract page definition -->

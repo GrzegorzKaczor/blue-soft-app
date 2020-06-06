@@ -7,6 +7,7 @@ import bluesoftapp.service.mapper.ContractMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -38,10 +39,11 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
-    public List<String> getSystems() {
-        return contractDao.getAllContracts().stream()
+    public Set<String> getSystems() {
+        Set<String> collect = contractDao.getAllContracts().stream()
                 .map(x -> x.getSystem())
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
+        return collect;
     }
 
     @Override
