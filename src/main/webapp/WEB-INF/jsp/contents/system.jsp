@@ -2,7 +2,7 @@
     <table id="example" class="table table-striped table-bordered" style="width:20%">
         <thead>
         <tr>
-            <th>System</th>
+            <th class="text-center">System</th>
         </tr>
         </thead>
         <tbody id="tablebody">

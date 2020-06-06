@@ -41,7 +41,6 @@ $(document).ready(function () {
 
                 $("#tablebody").append(
                     "<tr>" +
-                    "<td>" + dt.id + "</td>" +
                     "<td>" + dt.orderNumber + "</td>" +
                     "<td>" + dt.system + "</td>" +
                     "<td>" + fromDate + "</td>" +
