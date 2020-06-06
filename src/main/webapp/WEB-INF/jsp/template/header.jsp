@@ -15,11 +15,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#"> Wszystkie umowy </a>
-                <a class="nav-item nav-link" href="#"> Aktywne umowy </a>
-                <a class="nav-item nav-link" href="#"> Systemy </a>
-                <a class="nav-item nav-link" href="#"> Doda umowę </a>
-                <a class="nav-item nav-link" href="#"> O aplikacji </a>
+                <a class="nav-item nav-link" href="/all"> Wszystkie umowy </a>
+                <a class="nav-item nav-link" href="/active"> Aktywne umowy </a>
+                <a class="nav-item nav-link" href="/system"> Systemy </a>
+                <a class="nav-item nav-link" href="/add"> Doda umowę </a>
+                <a class="nav-item nav-link" href="/about"> O aplikacji </a>
             </div>
         </div>
     </nav>

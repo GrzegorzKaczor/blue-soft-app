@@ -24,5 +24,28 @@
         <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
     </definition>
 
+    <!-- Active Contract page definition -->
+    <definition name="active" extends="base">
+        <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+    </definition>
+
+    <!-- System page definition -->
+    <definition name="system" extends="base">
+        <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/system.jsp"/>
+    </definition>
+
+    <!-- Add contract page definition -->
+    <definition name="addContract" extends="base">
+        <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/addContract.jsp"/>
+    </definition>
+
+    <!-- About page definition -->
+    <definition name="about" extends="base">
+        <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/about.jsp"/>
+    </definition>
 
 </tiles-definitions>

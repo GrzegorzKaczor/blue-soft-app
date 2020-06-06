@@ -1,0 +1,5 @@
+<article>
+    O aplikacji :)
+
+
+</article>
