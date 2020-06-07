@@ -6,7 +6,7 @@
             <th style="width: 14%">System</th>
             <th style="width: 14%">Od</th>
             <th style="width: 14%">Do</th>
-            <th style="width: 20%">Wpływy</th>
+            <th style="width: 20%">Kwota</th>
             <th style="width: 14%">W skali</th>
             <th >Aktywna</th>
         </tr>
