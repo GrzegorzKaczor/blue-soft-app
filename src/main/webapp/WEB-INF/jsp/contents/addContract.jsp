@@ -76,7 +76,6 @@
                 </select>
             </div>
         </div>
-        <button type="button" class="btn btn-secondary mt-5 col-12 text-light mb-5" id="add-contract-button"
-           onclick="addContract()">Zatwierdź</button>
+        <button type="button" class="btn btn-secondary mt-5 col-12 text-light mb-5" id="add-contract-button">Zatwierdź</button>
     </form>
 </section>
