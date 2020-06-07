@@ -14,9 +14,9 @@ $(document).ready(function () {
 
                 var valueMapAmountType;
                 if (dt.amountType === "NET") {
-                    valueMapAmountType = "na miesiąc";
+                    valueMapAmountType = "netto";
                 } else {
-                    valueMapAmountType = "na rok";
+                    valueMapAmountType = "brutto";
                 }
                 ;
                 const amount = dt.amount / 100 + " " + valueMapAmountType;

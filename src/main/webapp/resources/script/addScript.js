@@ -2,25 +2,36 @@ $("#add-contract-button").click(function () {
     const orderNumber = $("#input-order-number").val();
     const system = $("#input-system").val();
 
-    const yearFromDate = Number.valueOf($("#input-year-from-date").val());
-    const monthFromDate = Number.valueOf($("#input-mont-from-date").val());
-    const dayFromDate = Number.valueOf($("#input-day-from-date").val());
+    const yearFromDate = parseInt($("#input-year-from-date").val(), 10);
+    const monthFromDate = parseInt($("#input-mont-from-date").val(), 10);
+    const dayFromDate = parseInt($("#input-day-from-date").val(), 10);
     const fromDate = {
         year: yearFromDate,
         month: monthFromDate,
         day: dayFromDate
     };
 
-    const yearToDate = Number.valueOf($("#input-year-to-date").val());
-    const monthToDate = Number.valueOf($("#input-mont-to-date").val());
-    const dayToDate = Number.valueOf($("#input-day-to-date").val());
+    const yearToDate = parseInt($("#input-year-to-date").val(), 10);
+    const monthToDate = parseInt($("#input-mont-to-date").val(), 10);
+    const dayToDate = parseInt($("#input-day-to-date").val(), 10);
     const toDate = {
         year: yearToDate,
         month: monthToDate,
         day: dayToDate
     };
 
-    const amount = $("#input-amount-pln").val() * 100 + $("#input-amount-gr").val();
+    const getValueGR = $("#input-amount-gr").val();
+
+    var valueGr;
+
+    if (getValueGR / 10 < 1) {
+        valueGr = "0" + getValueGR;
+    } else {
+        valueGr = getValueGR
+    }
+    ;
+
+    const amount = $("#input-amount-pln").val() + valueGr;
 
     var amountType;
     if ($("#input-amount-type").val() === "netto") {
@@ -37,7 +48,6 @@ $("#add-contract-button").click(function () {
         amountPeriod = "MONTH";
     }
     ;
-
 
     var active;
     if ($("#inputActive" === "TAK")) {
@@ -57,11 +67,9 @@ $("#add-contract-button").click(function () {
         amountPeriod: amountPeriod,
         active: active
     };
+
     console.log(contractDto);
 
-    console.log(JSON.stringify(contractDto));
-
-    jQuery.support.cors = true;
     $.ajax({
         method: "post",
         url: "http://localhost:8080/contract",
@@ -71,7 +79,7 @@ $("#add-contract-button").click(function () {
             window.location.href = "http://localhost:8080/all";
         },
         error: function () {
-            alert("Niepoprawne dane!");
+            alert("Nie udało się zapisać");
         }
     });
 });

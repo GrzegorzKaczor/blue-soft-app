@@ -42,6 +42,4 @@ public class HomeController {
         ModelAndView model = new ModelAndView("about");
         return model;
     }
-
-
 }
