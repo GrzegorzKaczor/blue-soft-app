@@ -32,7 +32,6 @@ public class AppContext {
         dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
 //        dataSource.setSchema(environment.getProperty("sql.schema"));
-//        dataSource.setSchema(environment.getProperty("sql.data"));
         return dataSource;
     }
 
