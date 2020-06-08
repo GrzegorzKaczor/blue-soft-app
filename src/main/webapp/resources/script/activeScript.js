@@ -1,14 +1,13 @@
 $(document).ready(function () {
-    $('#example').DataTable({
-        "paging": false,
-        "ordering": false,
-        "info": false
+    var table = $('#contract-tab').DataTable({
+        info: false,
+        pagingType: "simple_numbers"
     });
-});
-
-$(document).ready(function () {
     $.getJSON('http://localhost:8080/contract/active', function (data) {
         data.forEach(function (dt) {
+                const orderNumber = dt.orderNumber;
+                const system = dt.system;
+
                 const fromDate = dt.fromDate.year + "-" + dt.fromDate.month + "- " + dt.fromDate.day;
                 const toDate = dt.toDate.year + "-" + dt.toDate.month + "-" + dt.toDate.day;
 
@@ -19,16 +18,17 @@ $(document).ready(function () {
                     valueMapAmountType = "brutto";
                 }
                 ;
-
                 const amount = dt.amount / 100 + " " + valueMapAmountType;
-                var valueMapAvtivePeriod;
+
+                var valueMapActivePeriod;
+
                 if (dt.amountPeriod === "MONTH") {
-                    valueMapAvtivePeriod = "na miesiąc";
+                    valueMapActivePeriod = "na miesiąc";
                 } else {
-                    valueMapAvtivePeriod = "na rok";
+                    valueMapActivePeriod = "na rok";
                 }
                 ;
-                const amountPeriod = valueMapAvtivePeriod;
+                const amountPeriod = valueMapActivePeriod;
 
                 var activeMapValue;
                 if (dt.active === true) {
@@ -39,22 +39,13 @@ $(document).ready(function () {
                 ;
                 const active = activeMapValue;
 
-                $("#tablebody").append(
-                    "<tr>" +
-                    "<td>" + dt.orderNumber + "</td>" +
-                    "<td>" + dt.system + "</td>" +
-                    "<td>" + fromDate + "</td>" +
-                    "<td>" + toDate + "</td>" +
-                    "<td>" + amount + "</td>" +
-                    "<td>" + amountPeriod + "</td>" +
-                    "<td>" + active + "</td>" +
-                    "</tr>"
-                );
+                data = [orderNumber, system, fromDate, toDate, amount, amountPeriod, active];
+                table.row.add(data).draw();
             }
         );
     });
+    table.rows.add(dataTab).draw();
 });
-
 
 
 

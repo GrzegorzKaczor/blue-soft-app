@@ -13,11 +13,11 @@ public class HomeController {
         return model;
     }
 
-//    @GetMapping("/all")
-//    public ModelAndView getAllContractPage() {
-//        ModelAndView model = new ModelAndView("home");
-//        return model;
-//    }
+    @GetMapping("/all")
+    public ModelAndView getAllContractPage() {
+        ModelAndView model = new ModelAndView("home");
+        return model;
+    }
 
     @GetMapping("/active")
     public ModelAndView getActiveContractPage() {
