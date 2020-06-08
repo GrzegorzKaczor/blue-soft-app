@@ -44,6 +44,5 @@ $(document).ready(function () {
             }
         );
     });
-    table.rows.add(dataTab).draw();
 });
 
