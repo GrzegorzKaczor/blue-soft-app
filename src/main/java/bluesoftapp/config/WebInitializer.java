@@ -3,8 +3,6 @@ package bluesoftapp.config;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- *
- *
  * @author Grzegorz Kaczor
  * @version 1.0.0
  * @since 1.0.0

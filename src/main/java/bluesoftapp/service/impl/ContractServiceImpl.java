@@ -10,6 +10,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @Service
 public class ContractServiceImpl implements ContractService {
 

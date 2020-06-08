@@ -4,11 +4,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @Controller
 public class HomeController {
 
     @GetMapping("/")
-    public ModelAndView getHomePage(){
+    public ModelAndView getHomePage() {
         ModelAndView model = new ModelAndView("home");
         return model;
     }
@@ -38,7 +44,7 @@ public class HomeController {
     }
 
     @GetMapping("/about")
-    public ModelAndView getAboutPage(){
+    public ModelAndView getAboutPage() {
         ModelAndView model = new ModelAndView("about");
         return model;
     }

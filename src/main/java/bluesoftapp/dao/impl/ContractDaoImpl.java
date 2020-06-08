@@ -13,6 +13,12 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @Repository()
 @Transactional
 public class ContractDaoImpl implements ContractDao {

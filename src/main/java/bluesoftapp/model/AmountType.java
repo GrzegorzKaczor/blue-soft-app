@@ -2,6 +2,12 @@ package bluesoftapp.model;
 
 import lombok.ToString;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @ToString
 public enum AmountType {
 

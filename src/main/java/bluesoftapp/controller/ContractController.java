@@ -8,6 +8,12 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @RestController
 @RequestMapping("/contract")
 public class ContractController {
@@ -41,7 +47,7 @@ public class ContractController {
     }
 
     @DeleteMapping({"/{id}"})
-    public void deleteContract (@PathVariable(value = "id") Long id){
+    public void deleteContract(@PathVariable(value = "id") Long id) {
         contractService.deleteContract(id);
     }
 }

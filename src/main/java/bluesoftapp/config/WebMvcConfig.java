@@ -12,7 +12,6 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
 /**
- *
  * This is a class which configure web
  *
  * @author Grzegorz Kaczor

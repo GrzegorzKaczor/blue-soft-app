@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 /**
- *
  * This is a class which configure application context
  *
  * @author Grzegorz Kaczor
@@ -30,7 +29,7 @@ public class AppContext {
 
     private Environment environment;
 
-    public AppContext(Environment environment){
+    public AppContext(Environment environment) {
         this.environment = environment;
     }
 
@@ -58,7 +57,7 @@ public class AppContext {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] {"bluesoftapp.model"});
+        sessionFactory.setPackagesToScan(new String[]{"bluesoftapp.model"});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

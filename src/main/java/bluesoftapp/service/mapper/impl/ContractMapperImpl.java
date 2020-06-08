@@ -6,6 +6,11 @@ import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.mapper.ContractMapper;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
 @Component
 public class ContractMapperImpl implements ContractMapper {
 
