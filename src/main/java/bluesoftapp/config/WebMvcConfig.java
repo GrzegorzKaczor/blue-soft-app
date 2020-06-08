@@ -11,6 +11,16 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
+/**
+ *
+ * This is a class which configure web
+ *
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
+
 @Configuration
 @EnableWebMvc
 @ComponentScan("bluesoftapp")

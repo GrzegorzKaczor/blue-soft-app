@@ -13,6 +13,16 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+/**
+ *
+ * This is a class which configure application context
+ *
+ * @author Grzegorz Kaczor
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
 @Configuration
 @PropertySource("classpath:application.properties")
 @EnableTransactionManagement

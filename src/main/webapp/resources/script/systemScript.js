@@ -9,7 +9,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     $.getJSON('http://localhost:8080/contract/system', function (data) {
         data.forEach(function (dt) {
-                ;
 
                 $("#tablebody").append(
                     "<tr>" +
