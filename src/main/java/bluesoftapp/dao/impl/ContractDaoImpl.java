@@ -57,7 +57,12 @@ public class ContractDaoImpl implements ContractDao {
     @Override
     public void updateContract(Contract contract) {
         Session session = sessionFactory.getCurrentSession();
-
         session.update(contract);
+    }
+
+    @Override
+    public Contract getById(Long id) {
+        Session session = sessionFactory.getCurrentSession();
+        return session.byId(Contract.class).load(id);
     }
 }

@@ -53,7 +53,11 @@ public class ContractController {
 
     @PutMapping
     public void updateContract(@RequestBody ContractDto contractDto) {
-        System.out.println(contractDto);
         contractService.updateContract(contractDto);
+    }
+
+    @GetMapping("/{id}")
+    public ContractDto getById(@PathVariable(value = "id") Long id ){
+        return contractService.getById(id);
     }
 }

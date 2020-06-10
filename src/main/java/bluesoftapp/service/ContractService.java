@@ -28,4 +28,5 @@ public interface ContractService {
 
     void updateContract(ContractDto contractDto);
 
+    ContractDto getById(Long id);
 }

@@ -66,4 +66,9 @@ public class ContractServiceImpl implements ContractService {
     public void updateContract(ContractDto contractDto) {
         contractDao.updateContract(contractMapper.mapToEntity(contractDto));
     }
+
+    @Override
+    public ContractDto getById(Long id) {
+        return contractMapper.mapToDto(contractDao.getById(id));
+    }
 }

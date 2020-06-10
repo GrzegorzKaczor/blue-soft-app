@@ -21,4 +21,6 @@ public interface ContractDao {
     void deleteContract(Long id);
 
     void updateContract(Contract contract);
+
+    Contract getById(Long id);
 }
