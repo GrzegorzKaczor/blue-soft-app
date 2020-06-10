@@ -70,5 +70,15 @@ function editContract(id) {
 }
 
 function deleteContract(id) {
-    alert('Usuń ' + id);
+    $.ajax({
+        method: "delete",
+        url: "http://localhost:8080/contract/" + id,
+        success: function () {
+            alert("Usunięto umowę");
+            window.location.replace("http://localhost:8080")
+        },
+        error: function () {
+            alert("Nie udało się usunąć");
+        }
+    });
 }

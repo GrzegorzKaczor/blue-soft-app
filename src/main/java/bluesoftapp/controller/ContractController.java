@@ -1,14 +1,10 @@
 package bluesoftapp.controller;
 
-import bluesoftapp.model.AmountPeriod;
-import bluesoftapp.model.AmountType;
 import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.ContractService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
