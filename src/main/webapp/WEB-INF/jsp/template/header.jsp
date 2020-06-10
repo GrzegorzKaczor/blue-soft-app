@@ -20,11 +20,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="/all"> Wszystkie umowy </a>
-                        <a class="nav-item nav-link" href="/active"> Aktywne umowy </a>
-                        <a class="nav-item nav-link" href="/system"> Systemy </a>
-                        <a class="nav-item nav-link" href="/add"> Dodaj umowe </a>
-                        <a class="nav-item nav-link" href="/about"> O aplikacji </a>
+                        <a class="nav-item nav-link" href="/page/all"> Wszystkie umowy </a>
+                        <a class="nav-item nav-link" href="/page/active"> Aktywne umowy </a>
+                        <a class="nav-item nav-link" href="/page/system"> Systemy </a>
+                        <a class="nav-item nav-link" href="/page/add"> Dodaj umowe </a>
+                        <a class="nav-item nav-link" href="/page/about"> O aplikacji </a>
                     </div>
                 </div>
             </div>

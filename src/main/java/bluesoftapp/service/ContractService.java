@@ -20,8 +20,6 @@ public interface ContractService {
 
     List<ContractDto> getActiveContracts();
 
-//    Set<String> getSystems();
-
     void addContract(ContractDto contractDto);
 
     void deleteContract(Long id);

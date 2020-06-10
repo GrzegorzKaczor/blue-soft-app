@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
-public class HomeController {
+public class PageController {
 
     @GetMapping("/")
     public ModelAndView getHomePage() {
@@ -19,25 +19,25 @@ public class HomeController {
         return model;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/page/all")
     public ModelAndView getAllContractPage() {
         ModelAndView model = new ModelAndView("home");
         return model;
     }
 
-    @GetMapping("/active")
+    @GetMapping("/page/active")
     public ModelAndView getActiveContractPage() {
         ModelAndView model = new ModelAndView("active");
         return model;
     }
 
-    @GetMapping("/system")
+    @GetMapping("/page/system")
     public ModelAndView getSystemPage() {
         ModelAndView model = new ModelAndView("system");
         return model;
     }
 
-    @GetMapping("/add")
+    @GetMapping("/page/add")
     public ModelAndView getAddContractPage() {
         ModelAndView model = new ModelAndView("addContract");
         return model;
