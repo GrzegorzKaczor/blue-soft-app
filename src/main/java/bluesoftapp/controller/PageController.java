@@ -21,13 +21,13 @@ public class PageController {
 
     @GetMapping("/page/all")
     public ModelAndView getAllContractPage() {
-        ModelAndView model = new ModelAndView("home");
+        ModelAndView model = new ModelAndView("allContract");
         return model;
     }
 
     @GetMapping("/page/active")
     public ModelAndView getActiveContractPage() {
-        ModelAndView model = new ModelAndView("active");
+        ModelAndView model = new ModelAndView("activeContract");
         return model;
     }
 
@@ -43,7 +43,7 @@ public class PageController {
         return model;
     }
 
-    @GetMapping("/about")
+    @GetMapping("/page/about")
     public ModelAndView getAboutPage() {
         ModelAndView model = new ModelAndView("about");
         return model;

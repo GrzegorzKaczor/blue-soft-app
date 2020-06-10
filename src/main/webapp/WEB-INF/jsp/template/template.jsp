@@ -53,6 +53,6 @@
 <c:forEach var="script" items="${script}">
     <script src="<c:url value="${script}"/>"></script>
 </c:forEach>
-<%--<script src="/resources/script/homeScript.js"></script>--%>
+<%--<script src="/resources/script/allContractScript.js"></script>--%>
 </body>
 </html>

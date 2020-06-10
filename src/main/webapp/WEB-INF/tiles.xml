@@ -16,18 +16,27 @@
     <!-- Home page definition -->
     <definition name="home" extends="base">
         <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/home.jsp"/>
+        <put-list-attribute name="script">
+            <add-attribute value="/resources/script/script.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- All contract page definition -->
+    <definition name="allContract" extends="base">
+        <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/homeScript.js"/>
+            <add-attribute value="/resources/script/allContractScript.js"/>
         </put-list-attribute>
     </definition>
 
     <!-- Active Contract page definition -->
-    <definition name="active" extends="base">
+    <definition name="activeContract" extends="base">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/activeScript.js"/>
+            <add-attribute value="/resources/script/activeContractScript.js"/>
         </put-list-attribute>
     </definition>
 
@@ -45,7 +54,7 @@
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/addScript.js"/>
+            <add-attribute value="/resources/script/addContractScript.js"/>
         </put-list-attribute>
     </definition>
 
@@ -54,7 +63,7 @@
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/about.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/aboutScript.js"/>
+            <add-attribute value="/resources/script/script.js"/>
         </put-list-attribute>
     </definition>
 

@@ -1,7 +1,6 @@
 package bluesoftapp.controller;
 
 
-import bluesoftapp.model.System;
 import bluesoftapp.model.dto.SystemDto;
 import bluesoftapp.service.SystemService;
 import org.springframework.web.bind.annotation.GetMapping;
