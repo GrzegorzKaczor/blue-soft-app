@@ -1,10 +1,14 @@
 package bluesoftapp.controller;
 
+import bluesoftapp.model.AmountPeriod;
+import bluesoftapp.model.AmountType;
 import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.ContractService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -49,5 +53,11 @@ public class ContractController {
     @DeleteMapping({"/{id}"})
     public void deleteContract(@PathVariable(value = "id") Long id) {
         contractService.deleteContract(id);
+    }
+
+    @PutMapping
+    public void updateContract(@RequestBody ContractDto contractDto) {
+        System.out.println(contractDto);
+        contractService.updateContract(contractDto);
     }
 }

@@ -62,4 +62,8 @@ public class ContractServiceImpl implements ContractService {
         contractDao.deleteContract(id);
     }
 
+    @Override
+    public void updateContract(ContractDto contractDto) {
+        contractDao.updateContract(contractMapper.mapToEntity(contractDto));
+    }
 }
