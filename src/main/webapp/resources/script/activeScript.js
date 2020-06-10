@@ -6,7 +6,7 @@ $(document).ready(function () {
     $.getJSON('http://localhost:8080/contract/active', function (data) {
         data.forEach(function (dt) {
                 const orderNumber = '<div class="ml-1">' + dt.orderNumber + '</div>';
-                const system = '<div class="text-center">' + dt.system + '</div>';
+                const system = '<div class="text-center">' + dt.systemDto.name + '</div>';
 
                 const fromDate =
                     '<div class="ml-1">' +

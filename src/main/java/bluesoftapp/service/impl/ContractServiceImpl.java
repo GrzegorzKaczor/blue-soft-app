@@ -44,13 +44,13 @@ public class ContractServiceImpl implements ContractService {
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public Set<String> getSystems() {
-        Set<String> collect = contractDao.getAllContracts().stream()
-                .map(x -> x.getSystem())
-                .collect(Collectors.toSet());
-        return collect;
-    }
+//    @Override
+//    public Set<String> getSystems() {
+//        Set<String> collect = contractDao.getAllContracts().stream()
+//                .map(x -> x.getSystem())
+//                .collect(Collectors.toSet());
+//        return collect;
+//    }
 
     @Override
     public void addContract(ContractDto contractDto) {

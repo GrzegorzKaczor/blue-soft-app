@@ -4,6 +4,7 @@ package bluesoftapp.service.mapper.impl;
 import bluesoftapp.model.Contract;
 import bluesoftapp.model.dto.ContractDto;
 import bluesoftapp.service.mapper.ContractMapper;
+import bluesoftapp.service.mapper.SystemMapper;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,11 +15,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class ContractMapperImpl implements ContractMapper {
 
+    private SystemMapper systemMapper;
+
+    public ContractMapperImpl(SystemMapper systemMapper) {
+        this.systemMapper = systemMapper;
+    }
+
     @Override
     public Contract mapToEntity(ContractDto contractDto) {
         Contract contract = new Contract();
         contract.setId(contractDto.getId());
-        contract.setSystem(contractDto.getSystem());
+        contract.setSystem(systemMapper.mapToEntity(contractDto.getSystemDto()));
         contract.setOrderNumber(contractDto.getOrderNumber());
         contract.setFromDate(contractDto.getFromDate());
         contract.setToDate(contractDto.getToDate());
@@ -33,7 +40,7 @@ public class ContractMapperImpl implements ContractMapper {
     public ContractDto mapToDto(Contract contract) {
         ContractDto contractDto = new ContractDto();
         contractDto.setId(contract.getId());
-        contractDto.setSystem(contract.getSystem());
+        contractDto.setSystemDto(systemMapper.mapToDto(contract.getSystem()));
         contractDto.setOrderNumber(contract.getOrderNumber());
         contractDto.setFromDate(contract.getFromDate());
         contractDto.setToDate(contract.getToDate());

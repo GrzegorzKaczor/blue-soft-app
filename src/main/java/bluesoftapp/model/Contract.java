@@ -26,8 +26,8 @@ public class Contract {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Column(name = "system")
-    private String system;
+    @OneToOne
+    private System system;
     @NotNull
     @Column(name = "order_number")
     private String orderNumber;

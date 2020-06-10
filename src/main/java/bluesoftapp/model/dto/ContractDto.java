@@ -2,6 +2,7 @@ package bluesoftapp.model.dto;
 
 import bluesoftapp.model.AmountPeriod;
 import bluesoftapp.model.AmountType;
+import bluesoftapp.model.System;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,7 +22,7 @@ import java.time.LocalDate;
 public class ContractDto {
 
     private Long id;
-    private String system;
+    private SystemDto systemDto;
     private String orderNumber;
     private LocalDate fromDate;
     private LocalDate toDate;

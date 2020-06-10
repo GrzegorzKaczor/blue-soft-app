@@ -20,7 +20,7 @@ public interface ContractService {
 
     List<ContractDto> getActiveContracts();
 
-    Set<String> getSystems();
+//    Set<String> getSystems();
 
     void addContract(ContractDto contractDto);
 
