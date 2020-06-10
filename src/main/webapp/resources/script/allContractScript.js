@@ -58,8 +58,8 @@ $(document).ready(function () {
                     ')">Usuń</i></button>' +
                     '</div>';
 
-                data = [orderNumber, system, fromDate, toDate, amount, amountPeriod, active, buttons];
-                table.row.add(data).draw();
+                dataRow = [orderNumber, system, fromDate, toDate, amount, amountPeriod, active, buttons];
+                table.row.add(dataRow).draw();
             }
         );
     });

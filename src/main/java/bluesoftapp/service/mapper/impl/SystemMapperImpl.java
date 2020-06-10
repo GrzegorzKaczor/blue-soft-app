@@ -27,7 +27,7 @@ public class SystemMapperImpl implements SystemMapper {
         systemDto.setName(system.getName());
         systemDto.setDescriptionSystem(system.getDescriptionSystem());
         systemDto.setTechnologies(system.getTechnologies());
-        systemDto.setOwner(systemDto.getOwner());
+        systemDto.setOwner(system.getOwner());
         return systemDto;
     }
 }
