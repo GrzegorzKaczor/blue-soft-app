@@ -1,6 +1,18 @@
 $("#add-contract-button").click(function () {
+
+    const systemName = $("#input-system-name").val();
+    const systemDescription = $("#input-system-description").val();
+    const systemTechnologies = $("#input-system-technologies").val();
+    const systemOwner = $("#input-system-owner").val();
+
+    const systemDto = {
+        name: systemName,
+        descriptionSystem: systemDescription,
+        technologies: systemTechnologies,
+        owner: systemOwner
+    };
+
     const orderNumber = $("#input-order-number").val();
-    const system = $("#input-system").val();
 
     const yearFromDate = parseInt($("#input-year-from-date").val(), 10);
     const monthFromDate = parseInt($("#input-mont-from-date").val(), 10);
@@ -58,7 +70,7 @@ $("#add-contract-button").click(function () {
     ;
 
     const contractDto = {
-        system: system,
+        systemDto: systemDto,
         orderNumber: orderNumber,
         fromDate: fromDate,
         toDate: toDate,
@@ -68,15 +80,13 @@ $("#add-contract-button").click(function () {
         active: active
     };
 
-    console.log(contractDto);
-
     $.ajax({
         method: "post",
         url: "http://localhost:8080/contract",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(contractDto),
         success: function () {
-            window.location.href = "http://localhost:8080/all";
+            window.location.href = "http://localhost:8080/page/all";
         },
         error: function () {
             alert("Nie udało się zapisać");
