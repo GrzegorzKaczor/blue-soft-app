@@ -49,8 +49,9 @@
         <put-attribute name="content1" value="/WEB-INF/jsp/contents/contracts.jsp"/>
         <put-attribute name="content2" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/sendContract.js"/>
-            <add-attribute value="/resources/script/activeContractScript.js"/>
+            <add-attribute value="/resources/script/util/sendContract.js"/>
+            <add-attribute value="/resources/script/util/showContract.js"/>
+            <add-attribute value="/resources/script/activeContract.js"/>
         </put-list-attribute>
     </definition>
 
@@ -69,7 +70,8 @@
         <put-attribute name="content" value="/WEB-INF/jsp/contents/sendContract.jsp"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/sendContract.js"/>
+            <add-attribute value="/resources/script/util/sendContract.js"/>
+            <add-attribute value="/resources/script/addContract.js"/>
         </put-list-attribute>
     </definition>
 

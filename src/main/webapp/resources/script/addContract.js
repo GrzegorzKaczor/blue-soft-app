@@ -1,4 +1,4 @@
-addContract("post", null, null);
+sendContract("post", null, null);
 
 
 

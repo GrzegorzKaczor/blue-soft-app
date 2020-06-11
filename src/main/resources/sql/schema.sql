@@ -19,7 +19,7 @@ CREATE TABLE contract
     amount_type   integer               NOT NULL,
     active        boolean               NOT NULL,
     amount_period integer               NOT NULL,
-    system_id     integer               NOT NULL,
+    system_id     integer,
     PRIMARY KEY (id),
     FOREIGN KEY (system_id) REFERENCES system (id)
 );
