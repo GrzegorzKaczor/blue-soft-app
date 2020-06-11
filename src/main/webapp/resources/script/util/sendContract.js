@@ -140,4 +140,3 @@ function sendContractToServer(method, idContract, idSystem) {
 
 
 
-

@@ -135,7 +135,6 @@ function deleteContract(id) {
         method: "delete",
         url: "http://localhost:8080/contract/" + id,
         success: function () {
-            alert("Usunięto umowę");
             window.location.replace("http://localhost:8080/page/all")
         },
         error: function () {

@@ -46,7 +46,7 @@ public class ContractController {
     }
 
     @PutMapping
-    public void updateContract(@RequestBody ContractDto contractDto) {
+    public void updateContract(@RequestBody @Valid ContractDto contractDto) {
         contractService.updateContract(contractDto);
     }
 

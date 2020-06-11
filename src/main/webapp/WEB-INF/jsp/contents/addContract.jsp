@@ -1,5 +1,5 @@
 <section class="container" id="add-contract">
-    <form class="mt-4 mx-auto text-center needs-validation" style="width: 50%">
+    <form class="mt-4 mx-auto text-center" style="width: 50%">
         <p class="mt-4 mb-4 mb-1 h5">System</p>
         <div class="form-group">
             <div class="mb-3">
