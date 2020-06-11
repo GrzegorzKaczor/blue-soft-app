@@ -214,7 +214,7 @@ function setActive(data) {
 function editContract(idContract, idSystem) {
     $('#add-contract').show();
     setDataToUpdateContract(idContract);
-    addContract("put", idContract, idSystem);
+    sendContractToServer("put", idContract, idSystem);
 };
 
 
