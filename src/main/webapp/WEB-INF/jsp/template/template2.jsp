@@ -31,7 +31,10 @@
         <tiles:insertAttribute name="header"/>
     </header>
 
-    <main><tiles:insertAttribute name="content"/></main>
+    <main>
+        <tiles:insertAttribute name="content2"/>
+        <tiles:insertAttribute name="content1"/>
+    </main>
 </div>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"
@@ -53,6 +56,6 @@
 <c:forEach var="script" items="${script}">
     <script src="<c:url value="${script}"/>"></script>
 </c:forEach>
-<%--<script src="/resources/script/allContractScript.js"></script>--%>
+<%--<script src="/resources/script/allContract.js"></script>--%>
 </body>
 </html>

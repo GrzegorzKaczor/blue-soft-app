@@ -5,16 +5,25 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    <!-- Base definition -->
-    <definition name="base" template="/WEB-INF/jsp/template/template.jsp">
+    <!-- Base1 definition -->
+    <definition name="base1" template="/WEB-INF/jsp/template/template1.jsp">
         <put-attribute name="title" value=""/>
         <put-attribute name="header" value="/WEB-INF/jsp/template/header.jsp"/>
         <put-attribute name="nav" value="/WEB-INF/jsp/template/nav.jsp"/>
         <put-attribute name="content" value=""/>
     </definition>
 
+    <!-- Base2 definition -->
+    <definition name="base2" template="/WEB-INF/jsp/template/template2.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/jsp/template/header.jsp"/>
+        <put-attribute name="nav" value="/WEB-INF/jsp/template/nav.jsp"/>
+        <put-attribute name="content1" value=""/>
+        <put-attribute name="content2" value=""/>
+    </definition>
+
     <!-- Home page definition -->
-    <definition name="home" extends="base">
+    <definition name="home" extends="base1">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/home.jsp"/>
         <put-list-attribute name="script">
@@ -23,25 +32,30 @@
     </definition>
 
     <!-- All contract page definition -->
-    <definition name="allContract" extends="base">
+    <definition name="allContract" extends="base2">
         <put-attribute name="title" value="Blue Soft App"/>
-        <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-attribute name="content1" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-attribute name="content2" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/allContractScript.js"/>
+            <add-attribute value="/resources/script/util/sendContract.js"/>
+            <add-attribute value="/resources/script/util/showContract.js"/>
+            <add-attribute value="/resources/script/allContract.js"/>
         </put-list-attribute>
     </definition>
 
     <!-- Active Contract page definition -->
-    <definition name="activeContract" extends="base">
+    <definition name="activeContract" extends="base2">
         <put-attribute name="title" value="Blue Soft App"/>
-        <put-attribute name="content" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-attribute name="content1" value="/WEB-INF/jsp/contents/contracts.jsp"/>
+        <put-attribute name="content2" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
+            <add-attribute value="/resources/script/sendContract.js"/>
             <add-attribute value="/resources/script/activeContractScript.js"/>
         </put-list-attribute>
     </definition>
 
     <!-- System page definition -->
-    <definition name="system" extends="base">
+    <definition name="system" extends="base1">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/system.jsp"/>
         <put-list-attribute name="script">
@@ -50,16 +64,17 @@
     </definition>
 
     <!-- Add contract page definition -->
-    <definition name="addContract" extends="base">
+    <definition name="addContract" extends="base1">
         <put-attribute name="title" value="Blue Soft App"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contents/sendContract.jsp"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/addContract.jsp"/>
         <put-list-attribute name="script">
-            <add-attribute value="/resources/script/addContractScript.js"/>
+            <add-attribute value="/resources/script/sendContract.js"/>
         </put-list-attribute>
     </definition>
 
     <!-- About page definition -->
-    <definition name="about" extends="base">
+    <definition name="about" extends="base1">
         <put-attribute name="title" value="Blue Soft App"/>
         <put-attribute name="content" value="/WEB-INF/jsp/contents/about.jsp"/>
         <put-list-attribute name="script">

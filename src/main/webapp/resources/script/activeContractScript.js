@@ -29,15 +29,15 @@ $(document).ready(function () {
                     dt.amount / 100 + " " + valueMapAmountType +
                     '</div>';
 
-                var valueMapActivePeriod;
+                var valueMapAmountPeriod;
 
                 if (dt.amountPeriod === "MONTH") {
-                    valueMapActivePeriod = "na miesiąc";
+                    valueMapAmountPeriod = "na miesiąc";
                 } else {
-                    valueMapActivePeriod = "na rok";
+                    valueMapAmountPeriod = "na rok";
                 }
                 ;
-                const amountPeriod = '<div class="ml-1">' + valueMapActivePeriod + '</div>';
+                const amountPeriod = '<div class="ml-1">' + valueMapAmountPeriod + '</div>';
 
                 var activeMapValue;
                 if (dt.active === true) {
